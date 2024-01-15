@@ -1,0 +1,143 @@
+
+/* Mode0 */
+.mode0 {
+  .box{
+    flex: 0 50%;
+    height: 50%;
+  }
+}
+  
+/* Mode 1 */
+.mode1 {
+  .box1 {
+    flex: 0 0 85%;
+    height: 75%;
+  }
+  .box2 {
+    flex: 0 0 15%;
+    height: 75%;
+  }
+  .box3,.box4 {
+    flex: 0 0 50%;
+    height: 25%;
+  }
+}
+  
+/* Mode 2 */
+.mode2 {
+  .box1 {
+    flex: 0 0 15%;
+    height: 75%;
+  }
+  .box2 {
+    flex: 0 0 85%;
+    height: 75%;
+  }
+  .box3,.box4 {
+    flex: 0 0 50%;
+    height: 25%;
+  }
+}
+  
+/* Mode 3 */
+.mode3 {
+  .box1,.box2 {
+    flex: 0 0 50%;
+    height: 25%;
+  
+    .todo-item-list {
+      display: none;
+    }
+  }
+  .box3 {
+    flex: 0 0 85%;
+    height: 75%;
+  }
+  .box4 {
+    flex: 0 0 15%;
+    height: 75%;
+  
+      
+  }
+}
+  
+  
+/* Mode 4 */
+.mode4  {
+  .box1,.box2 {
+    flex: 0 0 50%;
+    height: 25%;
+  
+    .todo-item-list {
+      display: none;
+    }
+  }
+  .box3 {
+    flex: 0 0 15%;
+    height: 75%;
+  }
+  .box4 {
+    flex: 0 0 85%;
+    height: 75%;
+  }
+}
+
+/* 正在打开的 */
+.mode1 .box1,
+.mode2 .box2, 
+.mode3 .box3, 
+.mode4 .box4  {
+  .todo-item-wrap {
+    /* height: 100%; */
+  }
+  .todo-item-count {
+  }
+  .todo-item-name {
+  }
+  .todo-item-list {
+
+  }
+}
+/* 长&窄 */
+.mode1 .box2,
+.mode2 .box1, 
+.mode3 .box4, 
+.mode4 .box3  {
+  .todo-item-wrap {
+    font-weight: 500;
+    writing-mode: vertical-lr;
+    display: flex;
+  }
+  
+  .todo-item-count {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+  .todo-item-name {
+    font-size: 18px;
+    padding-left: 6px;
+  }
+  
+  .todo-item-list {
+    display: none;
+  }
+}
+/* 方块 */
+.mode1 .box3,.mode1 .box4,  
+.mode2 .box3,.mode2 .box4,
+.mode3 .box1,.mode3 .box2, 
+.mode4 .box1,.mode4 .box2  {
+  .todo-item-wrap {
+    height: 100%;
+  }
+  .todo-item-count {
+    order: 2;
+    align-self: flex-end;
+  }
+  .todo-item-name {
+    order: 1;
+  }
+  .todo-item-list {
+    display: none;
+  }
+}
