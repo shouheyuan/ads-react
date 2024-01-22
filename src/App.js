@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 import TodoItem from './components/todo-item/TodoItem'
+import Router from './router/Router'
 
 import './App.css';
 import './styles/mode-layout.css';
@@ -42,17 +43,17 @@ const MockData = [
 function App() {
   const defaultMode = 1
 
-  useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/posts?_limit=10')
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        // setPosts(data);
-      })
-      .catch((err) => {
-        console.log(err.message);
-      });
-  }, [])
+  // useEffect(() => {
+  //   fetch('https://jsonplaceholder.typicode.com/posts?_limit=10')
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       console.log(data);
+  //       // setPosts(data);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err.message);
+  //     });
+  // }, [])
 
   const [mode, setMode] = useState(defaultMode)
   const [modeIndex, setModeIndex] = useState(defaultMode)
@@ -80,8 +81,8 @@ function App() {
 
   return (
     <div className={`App mode${modeIndex}`}>
-      {todoTypeList}
-    </div>
+      <Router />
+    </div >
   );
 }
 
